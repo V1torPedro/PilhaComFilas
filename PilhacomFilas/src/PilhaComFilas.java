@@ -13,6 +13,7 @@ public class PilhaComFilas implements Empilhavel {
 	}
 
 	public void empilhar(Object elemento) {
+		//Move todos os elementos para f1 e acrescesta o elemento novo
 		while (f2.estaVazia() != true)
 			f1.enfileirar(f2.desenfileirar());
 		f1.enfileirar(elemento);
@@ -41,7 +42,7 @@ public class PilhaComFilas implements Empilhavel {
 			e = f1.desenfileirar();
 			f2.enfileirar(e);
 		}
-		// Devolve os elementos para f1
+		// Em seguida, devolve os elementos para f1
 		while (f2.estaVazia() != true) {
 			f1.enfileirar(f2.desenfileirar());
 		}
@@ -57,6 +58,10 @@ public class PilhaComFilas implements Empilhavel {
 	}
 
 	public String imprimir() {
+		// Move para f2, armazena os elementos e devolve para f1
+		// Por se tratar de pilha, a impressão dos elementos se baseia em LIFO
+		// Enquanto nas listas, a impressão seria FIFO
+		
 		Object topo = this.espiar();
 		String impressao = "]";
 		// Move para f2 enquanto monta a string
