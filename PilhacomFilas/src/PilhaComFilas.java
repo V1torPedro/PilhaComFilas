@@ -60,7 +60,7 @@ public class PilhaComFilas implements Empilhavel {
 	public String imprimir() {
 		// Move para f2, armazena os elementos e devolve para f1
 		// Por se tratar de pilha, a impressão dos elementos se baseia em LIFO
-		// Enquanto nas listas, a impressão seria FIFO
+		// Enquanto nas filas, a impressão seria FIFO
 		
 		Object topo = this.espiar();
 		String impressao = "]";
